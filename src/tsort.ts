@@ -34,7 +34,7 @@
  * // Prints:
  * // [3, 2, 1]
  * ```
- *  * @example
+ * @example
  * Cycle detection:
  * ```ts
  * const g = new Map<number, number[]>();
@@ -42,8 +42,6 @@
  * const i = tsort(g.keys(), (node) => { return g.get(node)! })
  * // Thows an Error: Cycle detected
  * ```
-
- *
  */
 export function* tsort<T>(
   nodes: Iterable<T>,
@@ -60,7 +58,7 @@ export function* tsort<T>(
  *
  * @param nodes - an `Iterable` of nodes to sort
  * @param children - a function that takes a node and returns an `Iterable` for the children of the node
- * @returns a `Generator` that yields the each strongly connected component as an `Array` of nodes
+ * @returns a `Generator` that yields each strongly connected component as an `Array` of nodes
  *
  * @example
  * Iterate over each strongly connected component and log the strongly connected component to the console
