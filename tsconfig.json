@@ -1,0 +1,7 @@
+{
+  "extends": "@tsconfig/node16-strictest-esm/tsconfig.json",
+   "compilerOptions": {
+      "noUncheckedIndexedAccess": false,
+   },
+  "include": ["./src/**/*.ts", "src/index.test.js", "src/index.test.js"]
+}
