@@ -16,7 +16,9 @@ pnpm add @lloydk/tsort
 ```
 
 ## Usage
+
 Sort a graph and iterate over the sorted nodes and log them to the console:
+
 ```ts
 const g = new Map<number, number[]>();
 g.set(1, [2, 3]).set(2, [3]).set(3, []);
@@ -27,7 +29,9 @@ for (const node of i) { console.log(node); }
 // 2
 // 1
 ```
+
 Create an array from the sorted nodes and log the array to the console:
+
 ```ts
 const g = new Map<number, number[]>();
 g.set(1, [2, 3]).set(2, [3]).set(3, []);
@@ -36,7 +40,9 @@ console.log(sorted);
 // Prints:
 // [3, 2, 1]
 ```
+
 Cycle detection:
+
 ```ts
 const g = new Map<number, number[]>();
 g.set(1, [2]).set(2, [3, 4]).set(3, [2]).set(4, []);
@@ -44,10 +50,8 @@ const i = tsort(g.keys(), (node) => { return g.get(node)! })
 // Thows an Error: Cycle detected
 ```
 
+Iterate over each strongly connected component of a graph and log each strongly connected component to the console:
 
-
-
-Iterate over each strongly connected component of a graph and log each strongly connected component to the console
 ```ts
 const g = new Map<number, number[]>();
   g.set(1, [2])
@@ -68,7 +72,6 @@ for (const node of i) { console.log(node); }
 // [1, 2]
 // [3, 4]
  ```
-
 
 ## License
 
