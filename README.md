@@ -71,7 +71,7 @@ for (const node of i) { console.log(node); }
 // [5]
 // [1, 2]
 // [3, 4]
- ```
+```
 
 ## License
 
